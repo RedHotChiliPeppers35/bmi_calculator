@@ -1,4 +1,3 @@
-
 import "package:bmi_calculator/View/Widgets/gender_widget.dart";
 import "package:bmi_calculator/View/Widgets/height_slider.dart";
 import "package:bmi_calculator/View/Widgets/weight_age_widget.dart";
@@ -37,7 +36,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       setState(() {
                         calc.calculateBMI();
                       });
-                    Navigator.pushReplacementNamed(context, "/results");
+                      Navigator.pushNamed(context, "/login_signup_page");
                     },
                     child: Text(
                       "Calculate",

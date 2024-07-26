@@ -1,6 +1,6 @@
-import 'dart:developer';
-
 import 'package:bmi_calculator/Controller/constants.dart';
+import 'package:bmi_calculator/View/Screens/calculator_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ResultsScreen extends StatefulWidget {
@@ -57,7 +57,11 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 TextButton(
                   onPressed: () {
                     calc.restart();
-                    Navigator.pushReplacementNamed(context, "/");
+                    Navigator.of(context).pushReplacement(CupertinoDialogRoute(
+                        builder: (context) {
+                          return CalculatorScreen();
+                        },
+                        context: context));
                   },
                   child: Container(
                       decoration: BoxDecoration(
